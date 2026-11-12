@@ -1,20 +1,16 @@
-EVANGELIO DEL DÍA — CROSSPOINT
+EVANGELIO DEL DÍA — PLUGIN NATIVO CROSSPOINT
 
-Este plugin nativo muestra un catálogo diario y descarga EPUBs a la tarjeta SD.
-Los EPUBs generados actualmente contienen Lorem ipsum ficticio, claramente
-marcado como contenido de prueba. No son lecturas bíblicas ni litúrgicas reales.
+Catálogo de hoy y los 30 días anteriores. Descarga el EPUB de una fecha a
+/Evangelio del Día en la tarjeta SD para leerlo sin conexión.
+
+IMPORTANTE: mientras no se configure una fuente autorizada, los EPUB contienen
+Lorem ipsum ficticio, con aviso visible. No son lecturas bíblicas reales.
 
 Instalación:
-1. Copia la carpeta evangelio-del-dia a /.crosspoint/plugins/ en la SD.
+1. Copia esta carpeta a /.crosspoint/plugins/evangelio-del-dia/ en la SD.
 2. Activa Settings > Connectivity > Plugins.
-3. Abre Home > Plugins > Evangelio del Día.
-4. Selecciona una fecha y confirma la descarga. El EPUB se guarda en
-   /Evangelio del Día/ para lectura offline.
+3. Conecta Wi-Fi, abre Home > Plugins > Evangelio del Día.
+4. Selecciona la fecha y descarga el EPUB.
 
-El catálogo ofrece hoy y los 30 días anteriores. Requiere Wi-Fi para consultar
-el catálogo y descargar; una vez descargado, el EPUB se lee sin conexión.
-
-Cuando se obtenga autorización, configura CEE_LECTIONARY_PATH en GitHub Actions
-con el JSON autorizado del Leccionario. El adaptador usa lookup_readings() del
-motor litúrgico y el generador incorpora los textos recibidos al EPUB.
-No subas el fichero protegido al repositorio público.
+Para cambiar a contenido autorizado, configura los secretos CEE_LECTIONARY_URL
+y CEE_LECTIONARY_TOKEN (si aplica) en el repositorio. Consulta el README raíz.
