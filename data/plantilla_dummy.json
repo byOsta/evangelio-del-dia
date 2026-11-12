@@ -1,0 +1,10 @@
+{
+  "_notice": "DATOS FICTICIOS DE PRUEBA. Sustituir por datos autorizados. No contiene textos del Leccionario.",
+  "mode": "dummy",
+  "readings": [
+    {"slot":"primera","label":"Primera lectura","citation":"CITA DE PRUEBA — sustituir","text":"LOREM IPSUM. Este texto es ficticio y solo sirve para comprobar la maquetación del EPUB. No es una lectura bíblica."},
+    {"slot":"salmo","label":"Salmo responsorial","citation":"SALMO DE PRUEBA — sustituir","text":"LOREM IPSUM. Texto de ejemplo para validar el bloque del salmo y su visualización en el lector."},
+    {"slot":"segunda","label":"Segunda lectura","citation":"CITA DE PRUEBA — sustituir","text":"LOREM IPSUM. Bloque opcional de segunda lectura. Sustituir únicamente por contenido autorizado."},
+    {"slot":"evangelio","label":"Evangelio","citation":"CITA DE PRUEBA — sustituir","text":"LOREM IPSUM. Este párrafo ficticio ocupa el lugar del Evangelio para probar el EPUB. No reproduce ningún texto protegido."}
+  ]
+}
