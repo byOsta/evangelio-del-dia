@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Genera el índice público del catálogo sin republicar textos protegidos.
+"""Genera un catálogo diario de referencias, sin copiar textos protegidos.
 
-El scraping y la generación de EPUB completos quedan deliberadamente
-desactivados hasta disponer de una autorización/licencia de redistribución.
+El calendario CEE se consulta en su fuente original. Este repositorio solo
+publica la fecha, metadatos mínimos y un enlace a la fuente; no descarga ni
+redistribuye el texto del Leccionario.
 """
 from datetime import datetime
 from pathlib import Path
@@ -11,27 +12,36 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "catalog" / "index.json"
+SOURCE_URL = "https://lecturasdeldia.org/"
 
 
 def main() -> None:
-    now = datetime.now(ZoneInfo("Europe/Madrid")).isoformat(timespec="seconds")
+    today = datetime.now(ZoneInfo("Europe/Madrid")).date()
+    date_text = today.isoformat()
     payload = {
-        "generated_at": now,
+        "generated_at": datetime.now(ZoneInfo("Europe/Madrid")).isoformat(timespec="seconds"),
         "timezone": "Europe/Madrid",
-        "source": "https://lecturasdeldia.org/",
-        "status": "pending_content_rights",
+        "calendar": "Conferencia Episcopal Española (CEE)",
+        "source": SOURCE_URL,
+        "content_policy": "references_and_metadata_only",
         "notice": (
-            "Catálogo preparado. Los textos íntegros y EPUB se publicarán "
-            "cuando se confirme una licencia o autorización de redistribución."
+            "Este catálogo no reproduce textos bíblicos ni del Leccionario. "
+            "Consulta las lecturas y sus citas en la fuente original."
         ),
-        "items": [],
+        "items": [
+            {
+                "id": date_text,
+                "title": f"Lecturas de la Misa — {date_text}",
+                "subtitle": "Calendario litúrgico CEE",
+                "description": "Abrir la fuente original para consultar las lecturas del día.",
+                "date": date_text,
+                "source_url": SOURCE_URL,
+            }
+        ],
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    print(f"Índice actualizado: {OUTPUT}")
+    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Catálogo actualizado: {OUTPUT}")
 
 
 if __name__ == "__main__":
