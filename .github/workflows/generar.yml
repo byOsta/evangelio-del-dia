@@ -1,6 +1,14 @@
-name: Actualizar catálogo del Evangelio
+name: Generar catálogo y EPUBs diarios
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/**"
+      - "data/**"
+      - "vendor/**"
+      - "plugin/**"
+      - ".github/workflows/generar.yml"
   schedule:
     - cron: "1 0 * * *"
       timezone: "Europe/Madrid"
@@ -10,12 +18,15 @@ permissions:
   contents: write
 
 concurrency:
-  group: actualizar-catalogo-evangelio
+  group: generar-epubs-diarios
   cancel-in-progress: false
 
 jobs:
   generar:
     runs-on: ubuntu-latest
+    env:
+      CEE_LECTIONARY_URL: ${{ secrets.CEE_LECTIONARY_URL }}
+      CEE_LECTIONARY_TOKEN: ${{ secrets.CEE_LECTIONARY_TOKEN }}
     steps:
       - name: Obtener repositorio
         uses: actions/checkout@v4
@@ -23,12 +34,24 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Calcular calendario y generar índice
+      - name: Descargar leccionario autorizado (opcional)
+        if: env.CEE_LECTIONARY_URL != ''
+        run: |
+          if [ -n "$CEE_LECTIONARY_TOKEN" ]; then
+            curl --fail --location --silent --show-error \
+              -H "Authorization: Bearer $CEE_LECTIONARY_TOKEN" \
+              "$CEE_LECTIONARY_URL" -o "$RUNNER_TEMP/Leccionario_CL.json"
+          else
+            curl --fail --location --silent --show-error \
+              "$CEE_LECTIONARY_URL" -o "$RUNNER_TEMP/Leccionario_CL.json"
+          fi
+          echo "CEE_LECTIONARY_PATH=$RUNNER_TEMP/Leccionario_CL.json" >> "$GITHUB_ENV"
+      - name: Generar catálogo e EPUBs (Lorem ipsum mientras no haya fuente autorizada)
         run: python scripts/generar_catalogo.py
-      - name: Publicar cambios
+      - name: Publicar catálogo y EPUBs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add catalog/index.json
-          git diff --cached --quiet || git commit -m "Actualizar catálogo diario"
+          git add catalog/index.json epubs/
+          git diff --cached --quiet || git commit -m "Generar catálogo y EPUBs diarios"
           git push
