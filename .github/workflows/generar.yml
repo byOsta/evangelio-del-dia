@@ -1,0 +1,37 @@
+name: Actualizar catálogo del Evangelio
+
+on:
+  schedule:
+    - cron: "1 0 * * *"
+      timezone: "Europe/Madrid"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-catalogo-evangelio
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generar índice
+        run: python scripts/generar_catalogo.py
+
+      - name: Publicar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog/index.json
+          git diff --cached --quiet || git commit -m "Actualizar catálogo diario"
+          git push
