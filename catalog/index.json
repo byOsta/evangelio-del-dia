@@ -1,9 +1,320 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-11-12T17:33:12+01:00",
   "timezone": "Europe/Madrid",
-  "calendar": "Conferencia Episcopal Española (CEE)",
-  "source": "https://lecturasdeldia.org/",
-  "content_policy": "references_and_metadata_only",
-  "notice": "No se reproducen textos bíblicos ni del Leccionario. Consulta las lecturas en la fuente original.",
-  "items": []
+  "calendar_engine": "zeanuri/lecturasdeldia — liturgia.py (MIT)",
+  "content_mode": "dummy_lorem_ipsum",
+  "notice": "Los EPUB actuales son de prueba Lorem ipsum. Sustituir por contenido autorizado antes de uso litúrgico.",
+  "history_days": 30,
+  "items": [
+    {
+      "id": "2026-11-12",
+      "title": "Evangelio — 12/11/2026",
+      "author": "Jueves de la XXXII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-12.epub",
+      "date": "2026-11-12",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-11",
+      "title": "Evangelio — 11/11/2026",
+      "author": "Miércoles de la XXXII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-11.epub",
+      "date": "2026-11-11",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-10",
+      "title": "Evangelio — 10/11/2026",
+      "author": "Martes de la XXXII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-10.epub",
+      "date": "2026-11-10",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-09",
+      "title": "Evangelio — 09/11/2026",
+      "author": "Dedicación de la Basílica de Letrán",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-09.epub",
+      "date": "2026-11-09",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-08",
+      "title": "Evangelio — 08/11/2026",
+      "author": "XXXII Domingo del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-08.epub",
+      "date": "2026-11-08",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-07",
+      "title": "Evangelio — 07/11/2026",
+      "author": "Sábado de la XXXI Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-07.epub",
+      "date": "2026-11-07",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-06",
+      "title": "Evangelio — 06/11/2026",
+      "author": "Viernes de la XXXI Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-06.epub",
+      "date": "2026-11-06",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-05",
+      "title": "Evangelio — 05/11/2026",
+      "author": "Jueves de la XXXI Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-05.epub",
+      "date": "2026-11-05",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-04",
+      "title": "Evangelio — 04/11/2026",
+      "author": "Miércoles de la XXXI Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-04.epub",
+      "date": "2026-11-04",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-03",
+      "title": "Evangelio — 03/11/2026",
+      "author": "Martes de la XXXI Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-03.epub",
+      "date": "2026-11-03",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-02",
+      "title": "Evangelio — 02/11/2026",
+      "author": "Conmemoración de los Fieles Difuntos",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-02.epub",
+      "date": "2026-11-02",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-11-01",
+      "title": "Evangelio — 01/11/2026",
+      "author": "Todos los Santos",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-01.epub",
+      "date": "2026-11-01",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-31",
+      "title": "Evangelio — 31/10/2026",
+      "author": "Sábado de la XXX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-31.epub",
+      "date": "2026-10-31",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-30",
+      "title": "Evangelio — 30/10/2026",
+      "author": "Viernes de la XXX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-30.epub",
+      "date": "2026-10-30",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-29",
+      "title": "Evangelio — 29/10/2026",
+      "author": "Jueves de la XXX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-29.epub",
+      "date": "2026-10-29",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-28",
+      "title": "Evangelio — 28/10/2026",
+      "author": "Santos Simón y Judas, Apóstoles",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-28.epub",
+      "date": "2026-10-28",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-27",
+      "title": "Evangelio — 27/10/2026",
+      "author": "Martes de la XXX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-27.epub",
+      "date": "2026-10-27",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-26",
+      "title": "Evangelio — 26/10/2026",
+      "author": "Lunes de la XXX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-26.epub",
+      "date": "2026-10-26",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-25",
+      "title": "Evangelio — 25/10/2026",
+      "author": "XXX Domingo del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-25.epub",
+      "date": "2026-10-25",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-24",
+      "title": "Evangelio — 24/10/2026",
+      "author": "Sábado de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-24.epub",
+      "date": "2026-10-24",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-23",
+      "title": "Evangelio — 23/10/2026",
+      "author": "Viernes de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-23.epub",
+      "date": "2026-10-23",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-22",
+      "title": "Evangelio — 22/10/2026",
+      "author": "Jueves de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-22.epub",
+      "date": "2026-10-22",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-21",
+      "title": "Evangelio — 21/10/2026",
+      "author": "Miércoles de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-21.epub",
+      "date": "2026-10-21",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-20",
+      "title": "Evangelio — 20/10/2026",
+      "author": "Martes de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-20.epub",
+      "date": "2026-10-20",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-19",
+      "title": "Evangelio — 19/10/2026",
+      "author": "Lunes de la XXIX Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-19.epub",
+      "date": "2026-10-19",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-18",
+      "title": "Evangelio — 18/10/2026",
+      "author": "XXIX Domingo del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-18.epub",
+      "date": "2026-10-18",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-17",
+      "title": "Evangelio — 17/10/2026",
+      "author": "Sábado de la XXVIII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-17.epub",
+      "date": "2026-10-17",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-16",
+      "title": "Evangelio — 16/10/2026",
+      "author": "Viernes de la XXVIII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-16.epub",
+      "date": "2026-10-16",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-15",
+      "title": "Evangelio — 15/10/2026",
+      "author": "Jueves de la XXVIII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-15.epub",
+      "date": "2026-10-15",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-14",
+      "title": "Evangelio — 14/10/2026",
+      "author": "Miércoles de la XXVIII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-14.epub",
+      "date": "2026-10-14",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
+    {
+      "id": "2026-10-13",
+      "title": "Evangelio — 13/10/2026",
+      "author": "Martes de la XXVIII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-13.epub",
+      "date": "2026-10-13",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    }
+  ]
 }
