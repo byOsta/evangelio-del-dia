@@ -1,8 +1,9 @@
 {
   "generated_at": null,
   "timezone": "Europe/Madrid",
+  "calendar": "Conferencia Episcopal Española (CEE)",
   "source": "https://lecturasdeldia.org/",
-  "status": "pending_content_rights",
-  "notice": "Los EPUB completos se activarán cuando se confirme la autorización de redistribución de los textos.",
+  "content_policy": "references_and_metadata_only",
+  "notice": "No se reproducen textos bíblicos ni del Leccionario. Consulta las lecturas en la fuente original.",
   "items": []
 }
