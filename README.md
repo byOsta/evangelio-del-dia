@@ -2,38 +2,44 @@
 
 Plugin nativo para CrossPoint Stable 2.0.0. No utiliza navegador integrado, interfaz web propia ni JavaScript ejecutado en el lector.
 
-## Qué hace esta versión
+## Estado actual
 
-- Publica un índice JSON diario con la fecha y metadatos mínimos.
-- Mantiene como referencia el calendario litúrgico de la Conferencia Episcopal Española (CEE).
-- Enlaza a la fuente original para consultar las lecturas y sus citas.
-- No copia, genera ni distribuye EPUBs con textos bíblicos o del Leccionario protegidos.
+- El catálogo se genera diariamente con el motor de cálculo litúrgico español del proyecto [zeanuri/lecturasdeldia](https://github.com/zeanuri/lecturasdeldia).
+- El motor Python (`liturgia.py`) se incluye en `vendor/lecturasdeldia/` bajo MIT, con su licencia y atribución.
+- El motor calcula el día litúrgico; el leccionario CEE es un conjunto de datos separado y NO se redistribuye aquí.
+- Sin un fichero de datos CEE autorizado, el catálogo muestra la celebración/calendario y enlaza a la fuente, pero no inventa citas ni textos.
+- Si se configura un leccionario con autorización de uso, el generador utiliza `liturgia.lookup_readings()` y publica únicamente las citas bíblicas, nunca el texto.
 
-**Importante:** el texto íntegro de las lecturas oficiales de la CEE no se considera libre de redistribución por el hecho de estar disponible en una web. La licencia MIT de este repositorio cubre únicamente nuestro código. No cubre textos, traducciones ni datos de terceros.
+## Datos del Leccionario y derechos
+
+La licencia MIT del proyecto de referencia cubre el código, no `data/*.json` ni los textos litúrgicos que contienen. El propio repositorio indica que esos textos pertenecen a sus titulares y que la reutilización debe autorizarse por separado.
+
+Para habilitar las citas exactas:
+1. Obtén autorización para usar el JSON del Leccionario CEE en este flujo.
+2. Guarda el fichero autorizado como `data/Leccionario_CL.json` (no lo subas al repositorio público).
+3. Configura la variable de entorno `CEE_LECTIONARY_PATH` apuntando a ese fichero durante el workflow. El generador solo conserva citas y metadatos.
+
+No se generan EPUBs con textos bíblicos porque todavía no se ha incorporado una traducción con licencia explícita de redistribución. Un EPUB completo offline requiere esa licencia o permiso expreso.
 
 ## Estructura
 
-- `plugin/evangelio-del-dia/device.json`: manifiesto declarativo para el catálogo nativo.
-- `catalog/index.json`: índice público consultado por el X3.
-- `scripts/generar_catalogo.py`: genera metadatos sin copiar contenido protegido.
-- `.github/workflows/generar.yml`: actualiza el índice diariamente a las 00:01, hora de Madrid.
+- `plugin/evangelio-del-dia/device.json`: catálogo declarativo para CrossPoint.
+- `catalog/index.json`: índice público.
+- `scripts/generar_catalogo.py`: cálculo litúrgico y extracción opcional de citas.
+- `.github/workflows/generar.yml`: actualización diaria a las 00:01 hora de Madrid.
+- `vendor/lecturasdeldia/`: motor de cálculo bajo MIT; ver licencia incluida.
 
 ## Instalación
 
 1. En CrossPoint, activa **Settings → Connectivity → Plugins**.
-2. Copia `plugin/evangelio-del-dia/` a `/.crosspoint/plugins/evangelio-del-dia/` en la tarjeta SD (o a la carpeta de plugins que admita tu instalación).
-3. Conecta el X3 a Wi-Fi y abre el catálogo desde **Home → Plugins**.
+2. Copia `plugin/evangelio-del-dia/` a la carpeta de plugins de tu tarjeta SD.
+3. Conecta el X3 a Wi-Fi para actualizar el catálogo.
 
-El índice requiere conexión para actualizarse. Esta versión no descarga lecturas completas para uso sin conexión, porque no tenemos autorización para redistribuir esos textos.
+La compatibilidad exacta del manifiesto `device.json` debe confirmarse con el esquema de plugins de la compilación concreta de CrossPoint Stable 2.0.0; no se ha probado en hardware X3 desde este entorno.
 
-## Fuente y derechos
+## Créditos y licencias
 
-- Calendario y lecturas: [lecturasdeldia.org](https://lecturasdeldia.org/), que identifica los textos litúrgicos como propiedad de la CEE.
-- Código de este proyecto: MIT.
-- Textos litúrgicos, traducciones bíblicas y demás contenido de terceros: conservan sus propias condiciones y no quedan cubiertos por la licencia MIT de este repositorio.
-
-El proyecto no está afiliado a la CEE ni a lecturasdeldia.org.
-
-## Automatización
-
-GitHub Actions actualiza el índice a las 00:01 en la zona horaria `Europe/Madrid`. GitHub puede retrasar las ejecuciones programadas; la hora no es una garantía exacta.
+- Motor litúrgico: [zeanuri/lecturasdeldia](https://github.com/zeanuri/lecturasdeldia), licencia MIT; cambios locales en el adaptador.
+- Calendario y textos litúrgicos: CEE y titulares correspondientes, sujetos a sus condiciones.
+- Este proyecto no está afiliado a la CEE ni a lecturasdeldia.org.
+- Código original/adaptador de este repositorio: MIT.
