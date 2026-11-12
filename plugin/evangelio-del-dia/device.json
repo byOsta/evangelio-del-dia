@@ -1,17 +1,22 @@
 {
-  "title": "Lecturas del Día",
-  "description": "Acceso a las lecturas del calendario litúrgico CEE en su fuente original. No almacena ni redistribuye textos protegidos.",
+  "title": "Evangelio del Día",
+  "description": "Evangelio y lecturas diarias en EPUB. Incluye historial de 30 días; los textos actuales son Lorem ipsum de prueba.",
   "browse": {
     "format": "json",
     "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/catalog/index.json",
     "items": "items",
     "fields": {
       "title": "title",
-      "author": "subtitle",
+      "author": "author",
       "id": "id",
-      "url": "source_url",
+      "url": "url",
       "description": "description"
     },
-    "page_size": 8
+    "page_size": 20
+  },
+  "download": {
+    "url": "{url}",
+    "filename": "Evangelio-{id}.epub",
+    "dest_dir": "/Evangelio del Día"
   }
 }
