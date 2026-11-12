@@ -1,36 +1,39 @@
-# Evangelio del Día — CrossPoint / Xteink X3
+# Lecturas del Día — CrossPoint / Xteink X3
 
-Plugin **nativo** para CrossPoint Stable 2.0.0. No usa `plugin.js`, navegador ni JavaScript en el lector.
+Plugin nativo para CrossPoint Stable 2.0.0. No utiliza navegador integrado, interfaz web propia ni JavaScript ejecutado en el lector.
 
-## Estado actual
+## Qué hace esta versión
 
-Esta primera estructura prepara el catálogo y la automatización, pero **no publica todavía el texto íntegro de las lecturas**. Los textos litúrgicos de la CEE no se consideran de libre redistribución por el mero hecho de poder consultarse en una web. Antes de generar EPUBs públicos con el Evangelio completo hay que confirmar una licencia o autorización expresa.
+- Publica un índice JSON diario con la fecha y metadatos mínimos.
+- Mantiene como referencia el calendario litúrgico de la Conferencia Episcopal Española (CEE).
+- Enlaza a la fuente original para consultar las lecturas y sus citas.
+- No copia, genera ni distribuye EPUBs con textos bíblicos o del Leccionario protegidos.
+
+**Importante:** el texto íntegro de las lecturas oficiales de la CEE no se considera libre de redistribución por el hecho de estar disponible en una web. La licencia MIT de este repositorio cubre únicamente nuestro código. No cubre textos, traducciones ni datos de terceros.
 
 ## Estructura
 
-- `plugin/evangelio-del-dia/device.json`: catálogo declarativo nativo de CrossPoint.
-- `catalog/index.json`: índice JSON público que consulta el X3.
-- `.github/workflows/generar.yml`: ejecución diaria a las 00:01, hora peninsular.
-- `scripts/generar_catalogo.py`: generador inicial del índice (sin republicar textos).
+- `plugin/evangelio-del-dia/device.json`: manifiesto declarativo para el catálogo nativo.
+- `catalog/index.json`: índice público consultado por el X3.
+- `scripts/generar_catalogo.py`: genera metadatos sin copiar contenido protegido.
+- `.github/workflows/generar.yml`: actualiza el índice diariamente a las 00:01, hora de Madrid.
 
-## Instalación en el Xteink X3
+## Instalación
 
-Con CrossPoint Stable 2.0.0:
+1. En CrossPoint, activa **Settings → Connectivity → Plugins**.
+2. Copia `plugin/evangelio-del-dia/` a `/.crosspoint/plugins/evangelio-del-dia/` en la tarjeta SD (o a la carpeta de plugins que admita tu instalación).
+3. Conecta el X3 a Wi-Fi y abre el catálogo desde **Home → Plugins**.
 
-1. Activa **Settings → Connectivity → Plugins**.
-2. Copia la carpeta `plugin/evangelio-del-dia/` a `/.crosspoint/plugins/evangelio-del-dia/` en la SD (también se admite `/plugins/`).
-3. Conecta el lector a Wi-Fi y abre **Home → Plugins → Evangelio del Día**.
+El índice requiere conexión para actualizarse. Esta versión no descarga lecturas completas para uso sin conexión, porque no tenemos autorización para redistribuir esos textos.
 
-El catálogo remoto se sirve desde GitHub Raw. Para leer sin conexión, cada EPUB deberá descargarse al dispositivo; la descarga de textos completos se habilitará cuando esté aclarada su licencia.
+## Fuente y derechos
 
-## Fuente litúrgica
+- Calendario y lecturas: [lecturasdeldia.org](https://lecturasdeldia.org/), que identifica los textos litúrgicos como propiedad de la CEE.
+- Código de este proyecto: MIT.
+- Textos litúrgicos, traducciones bíblicas y demás contenido de terceros: conservan sus propias condiciones y no quedan cubiertos por la licencia MIT de este repositorio.
 
-Se pretende usar el calendario litúrgico de la Conferencia Episcopal Española y lecturas de [lecturasdeldia.org](https://lecturasdeldia.org/) como referencia. El proyecto no está afiliado a la CEE ni a esa web.
+El proyecto no está afiliado a la CEE ni a lecturasdeldia.org.
 
 ## Automatización
 
-GitHub Actions ejecuta el generador diariamente. La hora programada es una petición a GitHub Actions, no una garantía de ejecución exacta al minuto: GitHub puede retrasar las tareas programadas.
-
-## Licencias y atribución
-
-El código de este proyecto se publica bajo MIT (ver `LICENSE`). Esa licencia **no cubre** textos bíblicos, traducciones, comentarios, calendarios o contenidos de terceros que puedan incorporarse en el futuro. No se incluirán esos materiales sin permiso/licencia compatible.
+GitHub Actions actualiza el índice a las 00:01 en la zona horaria `Europe/Madrid`. GitHub puede retrasar las ejecuciones programadas; la hora no es una garantía exacta.
