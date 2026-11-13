@@ -1,11 +1,21 @@
 {
-  "generated_at": "2026-11-12T17:33:25+01:00",
+  "generated_at": "2026-11-13T04:15:57+01:00",
   "timezone": "Europe/Madrid",
   "calendar_engine": "zeanuri/lecturasdeldia — liturgia.py (MIT)",
   "content_mode": "dummy_lorem_ipsum",
   "notice": "Los EPUB actuales son de prueba Lorem ipsum. Sustituir por contenido autorizado antes de uso litúrgico.",
   "history_days": 30,
   "items": [
+    {
+      "id": "2026-11-13",
+      "title": "Evangelio — 13/11/2026",
+      "author": "Viernes de la XXXII Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-13.epub",
+      "date": "2026-11-13",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
     {
       "id": "2026-11-12",
       "title": "Evangelio — 12/11/2026",
@@ -303,16 +313,6 @@
       "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
       "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-14.epub",
       "date": "2026-10-14",
-      "content_mode": "dummy_lorem_ipsum",
-      "source_url": "https://lecturasdeldia.org/"
-    },
-    {
-      "id": "2026-10-13",
-      "title": "Evangelio — 13/10/2026",
-      "author": "Martes de la XXVIII Semana del Tiempo Ordinario",
-      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
-      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-13.epub",
-      "date": "2026-10-13",
       "content_mode": "dummy_lorem_ipsum",
       "source_url": "https://lecturasdeldia.org/"
     }
