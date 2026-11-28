@@ -1,11 +1,21 @@
 {
-  "generated_at": "2026-11-27T05:51:52+01:00",
+  "generated_at": "2026-11-28T05:36:30+01:00",
   "timezone": "Europe/Madrid",
   "calendar_engine": "zeanuri/lecturasdeldia — liturgia.py (MIT)",
   "content_mode": "dummy_lorem_ipsum",
   "notice": "Los EPUB actuales son de prueba Lorem ipsum. Sustituir por contenido autorizado antes de uso litúrgico.",
   "history_days": 30,
   "items": [
+    {
+      "id": "2026-11-28",
+      "title": "Evangelio — 28/11/2026",
+      "author": "Sábado de la XXXIV Semana del Tiempo Ordinario",
+      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
+      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-11-28.epub",
+      "date": "2026-11-28",
+      "content_mode": "dummy_lorem_ipsum",
+      "source_url": "https://lecturasdeldia.org/"
+    },
     {
       "id": "2026-11-27",
       "title": "Evangelio — 27/11/2026",
@@ -303,16 +313,6 @@
       "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
       "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-29.epub",
       "date": "2026-10-29",
-      "content_mode": "dummy_lorem_ipsum",
-      "source_url": "https://lecturasdeldia.org/"
-    },
-    {
-      "id": "2026-10-28",
-      "title": "Evangelio — 28/10/2026",
-      "author": "Santos Simón y Judas, Apóstoles",
-      "description": "PRUEBA: Lorem ipsum, no son lecturas reales.",
-      "url": "https://raw.githubusercontent.com/byOsta/evangelio-del-dia/master/epubs/2026-10-28.epub",
-      "date": "2026-10-28",
       "content_mode": "dummy_lorem_ipsum",
       "source_url": "https://lecturasdeldia.org/"
     }
